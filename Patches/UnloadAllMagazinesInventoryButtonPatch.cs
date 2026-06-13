@@ -229,7 +229,7 @@ namespace UnloadAllMagazinesInventory.Patches
             }
 
             public void OnPointerEnter(PointerEventData _)
-                => ItemUiContext.Instance.Tooltip.Show("All Magazines unloaded", null, 0f, null);
+                => ItemUiContext.Instance.Tooltip.Show("Unload all magazines", null, 0f, null);
 
             public void OnPointerExit(PointerEventData _)
                 => ItemUiContext.Instance.Tooltip.Close();
