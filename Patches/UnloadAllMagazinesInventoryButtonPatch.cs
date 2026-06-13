@@ -176,7 +176,7 @@ namespace UnloadAllMagazinesInventory.Patches
                 if (!result.Failed)
                     count++;
                 else
-                    Plugin.Log.LogWarning($"[UnloadAllMagazinesInventory] {mag.Template._name}: {result.Error}");
+                    break;
             }
 
             NotificationManagerClass.DisplayMessageNotification(
