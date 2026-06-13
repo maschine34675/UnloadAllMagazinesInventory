@@ -4,7 +4,7 @@ using UnloadAllMagazinesInventory.Patches;
 
 namespace UnloadAllMagazinesInventory
 {
-    [BepInPlugin("com.maschine.UnloadAllMagazinesInventory", "UnloadAllMagazinesInventory", "1.0.0")]
+    [BepInPlugin("com.maschine.UnloadAllMagazinesInventory", "maschine-UnloadAllMagazinesInventory", "1.0.0")]
     public class Plugin : BaseUnityPlugin
     {
         public static ManualLogSource Log;
@@ -13,7 +13,7 @@ namespace UnloadAllMagazinesInventory
         {
             Log = Logger;
             new UnloadAllMagazinesInventoryButtonPatch().Enable();
-            Log.LogInfo("UnloadAllMagazinesInventory loaded.");
+            Log.LogInfo("UnloadAllMagazinesInventory 1.0.0 loaded.");
         }
     }
 }
