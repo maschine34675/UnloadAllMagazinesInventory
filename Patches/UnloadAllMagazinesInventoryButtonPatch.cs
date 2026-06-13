@@ -4,7 +4,6 @@ using EFT.UI;
 using EFT.UI.DragAndDrop;
 using HarmonyLib;
 using SPT.Reflection.Patching;
-using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -172,11 +171,9 @@ namespace UnloadAllMagazinesInventory.Patches
             foreach (var mag in magazines)
             {
                 if (mag.Count <= 0) continue;
-                var result = await controller.UnloadMagazine(mag, false);
-                if (!result.Failed)
-                    count++;
-                else
-                    break;
+                await controller.UnloadMagazine(mag, false);
+                if (mag.Count > 0) break;
+                count++;
             }
 
             NotificationManagerClass.DisplayMessageNotification(
